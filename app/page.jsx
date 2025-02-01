@@ -1,11 +1,13 @@
 "use client"
 
-import React from "react";
+import React, { useEffect } from "react";
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import HelloComponent from "@/components/HelloComponent";
 import SkillsBox from "@/components/SkillsBox";
 import Head from "next/head";
+import WorksComponent from "@/components/WorksComponent";
+import ContactBox from "@/components/ContactBox";
 
 const AnimateTools = dynamic(() => import('@/components/AnimateTools'), { ssr: false });
 export default function Home() {
@@ -17,13 +19,13 @@ export default function Home() {
   }
 
   return (
-    <div className="">
-       <Head>
+    <div >
+      <Head>
         <title>Doolotbek</title>
         <meta name="description" content="Tolonbay uulu Doolotbek" />
         <meta name="keywords" content="developer js frontend backend ui-ux designer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" /> 
+        <link rel="icon" href="/favicon.ico" />
         <meta charSet="utf-8" />
         {/* social */}
         <meta property="og:title" content="Tolonbay uulu Doolotbek developer" />
@@ -43,8 +45,8 @@ export default function Home() {
       </div>
       <div className="hidden md:block">
         <Header />
-        <main >
-          <div style={wrapMainPage} className="md:h-[600px] p-10 items-center grid lg:grid-cols-[2fr_1fr_2fr] md:grid-cols-[1fr]">
+        <main style={{ zIndex: 8 }} >
+          <div id="/" style={wrapMainPage} className="md:h-[600px] p-10 items-center grid lg:grid-cols-[2fr_1fr_2fr] md:grid-cols-[1fr]">
             <HelloComponent />
             <div style={{ boxShadow: "0 0 250px 300px #472bff2c" }} className="lg:w-[250px] lg:h-[250px] rounded-[250px] bg-[#472bff2c] shadow-[0 0 250px 300px #492BFF]">
               {/* <img src="/images/centerLight.png" alt="" /> */}
@@ -53,10 +55,23 @@ export default function Home() {
               <AnimateTools />
             </div>
           </div>
+          <span className="text-[30px] text-center  flex justify-center pb-[40px] 
+          font-black bg-gradient-to-r from-[#B30A94] to-[#492BFF] text-transparent bg-clip-text" id="skills">MY SKILLS</span>
           <SkillsBox />
-          <div className="h-[400px] flex items-center justify-center">
-            <h1>COMING COON...</h1>
+
+          <span className="text-[30px] text-center  flex justify-center m-[40px] 
+          font-black bg-gradient-to-r from-[#B30A94] to-[#492BFF] text-transparent bg-clip-text" id="works">WORKS (PROJECTS)</span>
+          <div className=" flex items-center justify-center">
+            <WorksComponent />
           </div>
+
+          <span className="text-[30px] text-center  flex justify-center m-[40px] 
+          font-black bg-gradient-to-r from-[#B30A94] to-[#492BFF] text-transparent bg-clip-text" id="works">CONTACT</span>
+          <ContactBox />
+
+          <span className="text-[30px] text-center  flex justify-center m-[40px] 
+          font-black bg-gradient-to-r from-[#B30A94] to-[#492BFF] text-transparent bg-clip-text" id="works">ABOUT ME</span>
+          <h1>COMING SOON...</h1>
         </main>
         <footer>
 

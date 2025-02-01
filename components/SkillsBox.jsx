@@ -49,48 +49,49 @@ function SkillsBox() {
         transform: "translateX(55px)", // Offset by half the hexagon width
     };
     return (
-        <div className='flex justify-center items-center'>
-
-            <div style={{ textAlign: "center", padding: "20px 0", width: "90%", filter: "blur(0.5px)", zIndex: 8, }} className='bg-black  wrapBees'>
-                <div style={rowStyle}>
-                    <div style={{ ...hexagonStyle, }}>JavaScript</div>
-                    <div style={{ ...hexagonStyle, }}>TypeScript</div>
-                    <div style={{ ...hexagonStyle, }}>HTML</div>
-                    <div style={{ ...hexagonStyle, }}>CSS</div>
-                    <div style={{ ...hexagonStyle, }}>React JS</div>
-                    <div style={{ ...hexagonStyle, }}>Redux</div>
-                    <div style={{ ...hexagonStyle, }}>Toolkit</div>
-                </div>
-                <div style={offsetRowStyle}>
-                    <div style={{ ...hexagonStyle, }}> React-Router</div>
-                    <div style={{ ...hexagonStyle, }}>Git</div>
-                    <div style={{ ...hexagonStyle, }}>Github</div>
-                    <div style={{ ...hexagonStyle, }}> REST  API (axios, fetch)</div>
-                    <div style={{ ...hexagonStyle, }}>styled-components</div>
-                    <div style={{ ...hexagonStyle, }}> CSS
-                        modules</div>
-                    <div style={{ ...hexagonStyle, }}>Tailwind</div>
-                    <div style={{ ...hexagonStyle, }}>flex-box</div>
-                    <div style={{ ...hexagonStyle, background: "#000" }}></div>
-                </div>
-                <div style={rowStyle}>
-                    <div style={{ ...hexagonStyle, }}>jQuery</div>
-                    <div style={{ ...hexagonStyle, }}>Bootstrap</div>
-                    <div style={{ ...hexagonStyle, }}>swagger</div>
-                    <div style={{ ...hexagonStyle, }}> Material UI (MUI),</div>
-                    <div style={{ ...hexagonStyle, }}>figma</div>
-                    <div style={{ ...hexagonStyle, }}> ui-ux</div>
-                    <div style={{ ...hexagonStyle, }}>Next JS</div>
-                </div>
-                <div style={rowStyle}>
-                    <div style={{ ...hexagonStyle, }}>Node JS</div>
-                    <div style={{ ...hexagonStyle, }}>Express JS</div>
-                    <div style={{ ...hexagonStyle, }}>Mongoose</div>
-                    <div style={{ ...hexagonStyle, }}>Nginx</div>
-                    <div style={{ ...hexagonStyle, }}>Postgrespl</div>
-                    <div style={{ ...hexagonStyle, }}>MongoDB</div>
-                    <div style={{ ...hexagonStyle, }}>Photosho</div>
-                    <div style={{ ...hexagonStyle, }}>And more...</div>
+        <div style={{zIndex:7}} className='flex justify-center items-center'>
+            <div style={{ textAlign: "center", padding: "", width: "90%", filter: "blur(0.5px)",  }} className='bg-gradient-to-r p-[2px] from-[#B30A94] to-[#492BFF] rounded-xl  wrapBees'>
+                <div className='w-full py-[20px] rounded-xl bg-black'>
+                    <div style={rowStyle}>
+                        <div style={{ ...hexagonStyle, }}>JavaScript</div>
+                        <div style={{ ...hexagonStyle, }}>TypeScript</div>
+                        <div style={{ ...hexagonStyle, }}>HTML</div>
+                        <div style={{ ...hexagonStyle, }}>CSS</div>
+                        <div style={{ ...hexagonStyle, }}>React JS</div>
+                        <div style={{ ...hexagonStyle, }}>Redux</div>
+                        <div style={{ ...hexagonStyle, }}>Toolkit</div>
+                    </div>
+                    <div style={offsetRowStyle}>
+                        <div style={{ ...hexagonStyle, }}> React-Router</div>
+                        <div style={{ ...hexagonStyle, }}>Git</div>
+                        <div style={{ ...hexagonStyle, }}>Github</div>
+                        <div style={{ ...hexagonStyle, }}> REST  API (axios, fetch)</div>
+                        <div style={{ ...hexagonStyle, }}>styled-components</div>
+                        <div style={{ ...hexagonStyle, }}> CSS
+                            modules</div>
+                        <div style={{ ...hexagonStyle, }}>Tailwind</div>
+                        <div style={{ ...hexagonStyle, }}>flex-box</div>
+                        <div style={{ ...hexagonStyle, background: "#000" }}></div>
+                    </div>
+                    <div style={rowStyle}>
+                        <div style={{ ...hexagonStyle, }}>jQuery</div>
+                        <div style={{ ...hexagonStyle, }}>Bootstrap</div>
+                        <div style={{ ...hexagonStyle, }}>swagger</div>
+                        <div style={{ ...hexagonStyle, }}> Material UI (MUI),</div>
+                        <div style={{ ...hexagonStyle, }}>figma</div>
+                        <div style={{ ...hexagonStyle, }}> ui-ux</div>
+                        <div style={{ ...hexagonStyle, }}>Next JS</div>
+                    </div>
+                    <div style={rowStyle}>
+                        <div style={{ ...hexagonStyle, }}>Node JS</div>
+                        <div style={{ ...hexagonStyle, }}>Express JS</div>
+                        <div style={{ ...hexagonStyle, }}>Mongoose</div>
+                        <div style={{ ...hexagonStyle, }}>Nginx</div>
+                        <div style={{ ...hexagonStyle, }}>Postgrespl</div>
+                        <div style={{ ...hexagonStyle, }}>MongoDB</div>
+                        <div style={{ ...hexagonStyle, }}>Photosho</div>
+                        <div style={{ ...hexagonStyle, }}>And more...</div>
+                    </div>
                 </div>
             </div>
         </div>
