@@ -50,7 +50,7 @@ function SkillsBox() {
     };
     return (
         <div style={{ zIndex: 7 }} className='flex justify-center items-center'>
-            <div style={{ textAlign: "center", padding: "", width: "100%", filter: "blur(0.5px)", }}
+            <div style={{ textAlign: "center", padding: "", width: "100%", }}
                 className='block md:hidden bg-gradient-to-r p-[2px] from-[#B30A94] to-[#492BFF] rounded-xl  wrapBees'>
                 <div className='w-full py-[5px] rounded-xl bg-black'>
                     <div style={rowStyle}>
