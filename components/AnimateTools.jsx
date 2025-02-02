@@ -30,7 +30,7 @@ function AnimateTools() {
      transform: rotate(0deg) translate(225px) rotate(0deg);
    }
    100% {
-     transform: rotate(360deg) translate(125px) rotate(-360deg);
+     transform: rotate(360deg) translate(225px) rotate(-360deg);
    }
  }
 `;
