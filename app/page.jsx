@@ -10,36 +10,18 @@ import WorksComponent from "@/components/WorksComponent";
 import ContactBox from "@/components/ContactBox";
 import AboutMeComponent from "@/components/AboutMeComponent";
 import AnimateToolsMobile from "@/components/AnimateToolsMobile";
+// import PlayMusic from "@/components/PlayMusic";
 // import bgMusic from "@/sounds/bgmusic.mp3"
 
 const AnimateTools = dynamic(() => import('@/components/AnimateTools'), { ssr: false });
+const PlayMusic = dynamic(() => import('@/components/PlayMusic'), { ssr: false });
 export default function Home() {
 
   const wrapMainPage = {
     // display: "grid",
     // gridTemplateColumns: "2fr 1fr 2fr",
   }
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isClient, setIsClient] = useState(false); // Client-side check
-  const audioRef = useRef(new Audio("/sounds/bgmusic.mp3"));
-
-  useEffect(() => {
-    setIsClient(true); // Enable audio once the component mounts
-  }, []);
-
-
-  function playMusic() {
-    if (isClient) {
-      if (isPlaying) {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0; // Reset audio to start
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  }
-
+  
   return (
     <div >
       <Head>
@@ -70,14 +52,7 @@ export default function Home() {
       >
         <Header />
         <main style={{ zIndex: 8 }} >
-          <div onClick={playMusic} className={`z-[99] w-[60px] h-[60px] fixed right-2 top-2 p-1 border cursor-pointer ${!isPlaying ? "border-[#B30A94]" : "border-[#0ead49]"} rounded-full`}>
-            <div>
-              <img src={!isPlaying ? "/icons/soundOff.svg" : "/icons/soundOn.svg"} />
-              {/* <button onClick={playMusic}>
-              play
-              </button> */}
-            </div>
-          </div>
+          <PlayMusic/>
 
           <div id="/" style={wrapMainPage} className="h-[800px] md:h-[1200px] lg:h-[600px] p-10 mb-[150px] lg:mb-0 items-center grid lg:grid-cols-[2fr_1fr_2fr] sm:grid-cols-[1fr] md:grid-cols-[1fr]">
             <HelloComponent />
