@@ -14,7 +14,6 @@ function SkillsBox() {
     //     clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)", // Hexagon shape
     //   };
     const hexagonStyle = {
-        // filter: "blur(1px)",
         zIndex: 3,
         position: "relative",
         width: "100px",
@@ -107,7 +106,7 @@ function SkillsBox() {
                 </div>
             </div>
             {/* desktop */}
-            <div style={{ textAlign: "center", padding: "", width: "90%", filter: "blur(0.5px)", }}
+            <div style={{ textAlign: "center", padding: "", width: "90%", }}
                 className='hidden md:block bg-gradient-to-r p-[2px] from-[#B30A94] to-[#492BFF] rounded-xl  wrapBees'>
                 <div className='w-full py-[20px] rounded-xl bg-black'>
                     <div style={rowStyle}>
