@@ -20,16 +20,24 @@ export default function Home() {
     // gridTemplateColumns: "2fr 1fr 2fr",
   }
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isClient, setIsClient] = useState(false); // Client-side check
   const audioRef = useRef(new Audio("/sounds/bgmusic.mp3"));
 
+  useEffect(() => {
+    setIsClient(true); // Enable audio once the component mounts
+  }, []);
+
+
   function playMusic() {
-    if (isPlaying) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0; // Reset audio to start
-    } else {
-      audioRef.current.play();
+    if (isClient) {
+      if (isPlaying) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0; // Reset audio to start
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
     }
-    setIsPlaying(!isPlaying);
   }
 
   return (
@@ -57,7 +65,7 @@ export default function Home() {
         COMING SOON MOBILE VERSION...
         <h3>You can see on Desktop</h3>
       </div> */}
-      <div 
+      <div
       // className="hidden md:block"
       >
         <Header />
