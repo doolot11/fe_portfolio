@@ -11,7 +11,7 @@ function WorksComponent() {
         { urlTitle: "dobush.kg", title: "Elections of local council deputies of the Kyrgyz Republic - November 17, 2024.", image: "/projects/dobushkg.png", id: 5, url: "https://dobush.kg", },
     ]
     return (
-        <div className='grid grid-cols-3 gap-3'>
+        <div className='grid grid-cols-1 gap-3 lg:grid-cols-3 mx-4 lg:mx-0'>
             {dataWorks.map((i) => (
                 <WorksCard data={i} key={i.id} />
             ))}

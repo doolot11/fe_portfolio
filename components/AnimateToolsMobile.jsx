@@ -1,36 +1,36 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import HoverableImage from './ToShowSkillsHovering';
-function AnimateTools() {
+function AnimateToolsMobile() {
 
     const keyframesCircleLevel0 = `
- @keyframes circleLevel0 {
+ @keyframes circleLevel0Mobile {
    0% {
-     transform: rotate(0deg) translate(75px) rotate(0deg);
+     transform: rotate(0deg) translate(50px) rotate(0deg);
    }
    100% {
-     transform: rotate(360deg) translate(75px) rotate(-360deg);
+     transform: rotate(360deg) translate(50px) rotate(-360deg);
    }
  }
 `;
     const keyframesCircleLevel1 = `
- @keyframes circleLevel1 {
+ @keyframes circleLevel1Mobile {
    100% {
-     transform: rotate(0deg) translate(150px) rotate(0deg);
+     transform: rotate(0deg) translate(110px) rotate(0deg);
    }
    0% {
-     transform: rotate(360deg) translate(150px) rotate(-360deg);
+     transform: rotate(360deg) translate(110px) rotate(-360deg);
    }
  }
 `;
     const keyframesCircleLevel2 = `
- @keyframes circleLevel2 {
+ @keyframes circleLevel2Mobile {
    0% {
-     transform: rotate(0deg) translate(225px) rotate(0deg);
+     transform: rotate(0deg) translate(175px) rotate(0deg);
    }
    100% {
-     transform: rotate(360deg) translate(125px) rotate(-360deg);
+     transform: rotate(360deg) translate(175px) rotate(-360deg);
    }
  }
 `;
@@ -51,8 +51,8 @@ function AnimateTools() {
 
     // Circle style
     const createCircleImageStyleLevel0 = (delay) => ({
-        width: "50px",
-        height: "50px",
+        width: "30px",
+        height: "30px",
         border: "1px solid #492BFF",
         position: "absolute",
         top: 0,
@@ -61,13 +61,13 @@ function AnimateTools() {
         left: 0,
         margin: "auto",
         borderRadius: "50%",
-        animation: `circleLevel0 20s linear infinite`,
+        animation: `circleLevel0Mobile 20s linear infinite`,
         animationDelay: `${delay}s`, // Add delay for sequential rotation
         boxShadow: "0 0 10px 10px #472bff13"
     });
     const createCircleImageStyleLevel1 = (delay) => ({
-        width: "50px",
-        height: "50px",
+        width: "30px",
+        height: "30px",
         border: "1px solid #492BFF",
         position: "absolute",
         top: 0,
@@ -76,13 +76,13 @@ function AnimateTools() {
         left: 0,
         margin: "auto",
         borderRadius: "50%",
-        animation: `circleLevel1 20s linear infinite`,
+        animation: `circleLevel1Mobile 20s linear infinite`,
         animationDelay: `${delay}s`, // Add delay for sequential rotation
         boxShadow: "0 0 10px 10px #472bff13"
     });
     const createCircleImageStyleLevel2 = (delay) => ({
-        width: "50px",
-        height: "50px",
+        width: "30px",
+        height: "30px",
         border: "1px solid #492BFF",
         position: "absolute",
         top: 0,
@@ -91,14 +91,14 @@ function AnimateTools() {
         left: 0,
         margin: "auto",
         borderRadius: "50%",
-        animation: `circleLevel2 20s linear 5s infinite`,
+        animation: `circleLevel2Mobile 20s linear 5s infinite`,
         animationDelay: `${delay}s`, // Add delay for sequential rotation
         boxShadow: "0 0 10px 10px #472bff13",
     });
 
     const level0Circle = {
-        width: "150px",
-        height: "150px",
+        width: "100px",
+        height: "100px",
         position: "absolute",
         top: 0,
         bottom: 0,
@@ -111,8 +111,8 @@ function AnimateTools() {
     }
 
     const level1circle = {
-        width: "300px",
-        height: "300px",
+        width: "220px",
+        height: "220px",
         border: "1px solid #492BFF",
         position: "absolute",
         top: 0,
@@ -124,8 +124,8 @@ function AnimateTools() {
         transform: "rotate(0deg)"
     }
     const level2circle = {
-        width: "450px",
-        height: "450px",
+        width: "350px",
+        height: "350px",
         border: "1px solid #492BFF",
         position: "absolute",
         top: 0,
@@ -209,7 +209,7 @@ function AnimateTools() {
             <div style={level1circle} > {renderCirclesLevel1()}
                 <div style={level0Circle} >{renderCirclesLevel0()}
                     <div style={mySkillsStyle}>
-                        <div style={textMySkillsStyle}> <b>MY SKILLS</b></div>
+                        <div style={textMySkillsStyle} className='text-[12px]'> <b>MY SKILLS</b></div>
 
                     </div>
                 </div >
@@ -218,7 +218,7 @@ function AnimateTools() {
     );
 }
 
-export default AnimateTools
+export default AnimateToolsMobile
 
 const textMySkillsStyle = {
     background: "linear-gradient(to right, #FA12E3, blue)",

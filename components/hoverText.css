@@ -10,6 +10,11 @@
   background-clip: text;
   /* overflow: hidden; */
 }
+@media (max-width: 768px) {
+  .hoverme {
+    font-size: 30px; /* Smaller font size on medium screens */
+  }
+}
 .hoverme::before {
   content: attr(data-text);
   position: absolute;
