@@ -84,7 +84,7 @@ export default function Home() {
           <span className="text-[30px] text-center  flex justify-center m-[40px] 
           font-black bg-gradient-to-r from-[#B30A94] to-[#492BFF] text-transparent bg-clip-text" id="works">ABOUT ME</span>
           <AboutMeComponent />
-          <h1>COMING SOON...</h1>
+          <h1 className="text-[#fff]">COMING SOON...</h1>
         </main>
         <footer>
 

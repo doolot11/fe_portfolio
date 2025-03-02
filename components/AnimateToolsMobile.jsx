@@ -17,20 +17,20 @@ function AnimateToolsMobile() {
     const keyframesCircleLevel1 = `
  @keyframes circleLevel1Mobile {
    100% {
-     transform: rotate(0deg) translate(110px) rotate(0deg);
+     transform: rotate(0deg) translate(100px) rotate(0deg);
    }
    0% {
-     transform: rotate(360deg) translate(110px) rotate(-360deg);
+     transform: rotate(360deg) translate(100px) rotate(-360deg);
    }
  }
 `;
     const keyframesCircleLevel2 = `
  @keyframes circleLevel2Mobile {
    0% {
-     transform: rotate(0deg) translate(175px) rotate(0deg);
+     transform: rotate(0deg) translate(150px) rotate(0deg);
    }
    100% {
-     transform: rotate(360deg) translate(175px) rotate(-360deg);
+     transform: rotate(360deg) translate(150px) rotate(-360deg);
    }
  }
 `;
@@ -111,8 +111,8 @@ function AnimateToolsMobile() {
     }
 
     const level1circle = {
-        width: "220px",
-        height: "220px",
+        width: "200px",
+        height: "200px",
         border: "1px solid #492BFF",
         position: "absolute",
         top: 0,
@@ -124,8 +124,8 @@ function AnimateToolsMobile() {
         transform: "rotate(0deg)"
     }
     const level2circle = {
-        width: "350px",
-        height: "350px",
+        width: "300px",
+        height: "300px",
         border: "1px solid #492BFF",
         position: "absolute",
         top: 0,

@@ -15,7 +15,7 @@ function WorksComponent() {
             {dataWorks.map((i) => (
                 <WorksCard data={i} key={i.id} />
             ))}
-            <h3>And more projects...</h3>
+            <h3 className='text-white'>And more projects...</h3>
         </div>
     )
 }
